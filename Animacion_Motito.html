@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">  
+  <head>    
+    <title>Jueguito para Dinovín</title>    
+    <meta charset="UTF-8">
+    <meta name="title" content="Jueguito para Dinovín">
+    <meta name="description" content="Descripción de la WEB">    
+    <style>
+	
+			
+		#cielito{
+		
+			height: 400px;
+			width: 100%;
+			background-color: skyblue;
+		
+		}
+		
+		#suelo{
+		
+		
+			height: 200px;
+			width: 100%;
+			background-color: gray;
+		
+		
+		}
+		
+		#valentino{
+		
+			padding-top: 200px;
+			margin-left: 0px;
+		
+		}
+		
+		#btn_verde{
+		
+			margin-left: 50px;
+		}
+		
+		#btn_rojo{
+		
+			margin-left: 1100px;
+		}
+	
+	
+	</style>
+	<script src= "jquery-3.6.0.min.js"></script>
+	<script>
+	
+		$(document).ready(function(){
+		
+		
+			
+			$("#valentino, #btn_verde, #btn_rojo").click(function(e){
+				
+				//alert(e.target.id);
+				
+				e.preventDefault();
+				
+				if(e.target.id == "valentino" || e.target.id == "btn_verde"){
+				
+					$("#valentino").animate({
+				
+				
+						marginLeft: "1100px"
+				
+				
+				    }, 1500);
+				
+				
+				}
+				else if(e.target.id == "btn_rojo"){
+				
+					$("#valentino").css("margin-left" , "0px");
+				
+				}
+			
+			
+			});
+			
+			
+			
+		
+		});
+	
+	
+	</script>
+	
+  </head>  
+  <body>    
+
+	<div id="cielito">
+		<img src= "imgs/valentino.png" id= "valentino">
+	</div>
+	<div id= "suelo">
+		
+	</div>
+	<div id= "cont_buttons">
+		<table>
+			<tr>
+				<td><img src= "imgs/boton-verde.png" id= "btn_verde"></td>
+				<td><img src= "imgs/boton-rojo.png" id= "btn_rojo"></td>
+			</tr>
+		</table>
+	</div>
+    
+  </body>  
+</html>
